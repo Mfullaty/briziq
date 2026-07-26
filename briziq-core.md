@@ -1,4 +1,4 @@
-# 🌾 Agrihype — Product Feature Specification
+# 🌾 Briziq — Product Feature Specification
 
 AI-Powered Agricultural Export Intelligence & Coordination Platform
 
@@ -135,7 +135,7 @@ Dashboards include:
 
 ### 🎯 Goal
 
-Turn Agrihype into daily operational software for exporters.
+Turn Briziq into daily operational software for exporters.
 
 ---
 
@@ -193,7 +193,7 @@ Examples:
 
 ### 🎯 Goal
 
-Make Agrihype an intelligence engine for export coordination.
+Make Briziq an intelligence engine for export coordination.
 
 ---
 
@@ -243,7 +243,7 @@ AI recommends:
 
 ### 🎯 Goal
 
-Position Agrihype as trade infrastructure, not just a SaaS tool.
+Position Briziq as trade infrastructure, not just a SaaS tool.
 
 ---
 
@@ -292,7 +292,7 @@ Expose APIs for:
 
 # 🚀 Product Positioning
 
-**Agrihype is not a marketplace.  
+**Briziq is not a marketplace.  
 It is an intelligence and coordination layer between agricultural supply and global demand.**
 
 ---
@@ -326,7 +326,7 @@ You are successful when:
 
 - Exporters actively use dashboards weekly
 - Deals are initiated through the platform
-- Real trade coordination happens inside Agrihype
+- Real trade coordination happens inside Briziq
 - Users are willing to pay subscription fees
 
 ---

@@ -1,6 +1,6 @@
 # Authentication
 
-AgriHype Dashboard uses NextAuth.js as the authentication solution, offering a robust and flexible way to handle user authentication, it supports custom authentication flows and provides a wide range of authentication providers, including Google, GitHub, and more.
+Briziq Dashboard uses NextAuth.js as the authentication solution, offering a robust and flexible way to handle user authentication, it supports custom authentication flows and provides a wide range of authentication providers, including Google, GitHub, and more.
 
 NextAuth relies on environment variables for secure configuration. By default, our template includes the following variables in the .env file:
 

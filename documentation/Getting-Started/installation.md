@@ -2,12 +2,12 @@
 
 ## Prerequisites
 
-Before getting started with AgriHype Dashboard, ensure your development environment has the following tools installed:
+Before getting started with Briziq Dashboard, ensure your development environment has the following tools installed:
 
 - Node.js
 - npm
 
-## Installing AgriHype dashboard
+## Installing Briziq dashboard
 
 After extracting the downloaded .zip file, you'll find two folders TypeScript and JavaScript. Each folder contains the following sub-directories:
 

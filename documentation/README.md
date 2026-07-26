@@ -1,6 +1,6 @@
-# AgriHype Projects Dashboard – Documentation
+# Briziq Projects Dashboard – Documentation
 
-This folder contains internal documentation for the AgriHype Projects Dashboard. Start here:
+This folder contains internal documentation for the Briziq Projects Dashboard. Start here:
 
 ## Getting Started
 
@@ -46,7 +46,7 @@ This folder contains internal documentation for the AgriHype Projects Dashboard.
 
 ## 1. Overview
 
-AgriHype Projects Dashboard is a Next.js + TypeScript admin/dashboard template built on the App Router. It provides:
+Briziq Projects Dashboard is a Next.js + TypeScript admin/dashboard template built on the App Router. It provides:
 
 - **Config-driven layout and navigation** (side/top layouts, collapsible nav, etc.).
 - **Authentication** via `next-auth` (GitHub, Google, and credentials).
@@ -586,4 +586,4 @@ Because `AxiosBase` uses `/api` as `baseURL`, the service paths are concise and 
 - For **charts and maps**: see config and components using `chart.config.ts`, `react-apexcharts`, `react-simple-maps`, and related libs.
 - For **role-based access**: check commented guidance in `middleware.ts` and extend route config with `authority` settings.
 
-This document should give you an end-to-end understanding of how the AgriHype Projects Dashboard works so you can safely adapt it to your product’s needs.
+This document should give you an end-to-end understanding of how the Briziq Projects Dashboard works so you can safely adapt it to your product’s needs.

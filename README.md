@@ -1,10 +1,10 @@
-# AgriHype Dashboard - The Ultimate Next.js & TypeScript Web Template
+# Briziq Dashboard - The Ultimate Next.js & TypeScript Web Template
 
 See FULL DOCUMENTATION at [here](/documentation/README.md) for more information.
 
-AgriHype Dashboard is a modern and responsive admin dashboard template built with Next.js and TypeScript. Designed to provide a highly customizable and easy-to-use platform for building admin interfaces, it includes a variety of reusable components, pre-designed pages, and dynamic features.
+Briziq Dashboard is a modern and responsive admin dashboard template built with Next.js and TypeScript. Designed to provide a highly customizable and easy-to-use platform for building admin interfaces, it includes a variety of reusable components, pre-designed pages, and dynamic features.
 
-This template is perfect for developing dashboards, web applications, CRM systems, e-commerce backends, and more. Whether you're building a small-scale admin panel or a large-scale enterprise application, AgriHype Dashboard is designed to be flexible and scalable.
+This template is perfect for developing dashboards, web applications, CRM systems, e-commerce backends, and more. Whether you're building a small-scale admin panel or a large-scale enterprise application, Briziq Dashboard is designed to be flexible and scalable.
 
 Key Features:
 

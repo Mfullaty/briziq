@@ -1,6 +1,6 @@
 # TailwindCSS
 
-Tailwind CSS is a utility-first CSS framework that provides predefined classes for building and designing UI directly within JSX. AgriHype Dashboard utilizes Tailwind as its core CSS framework, with most UI elements built entirely using its features. You can easily update the theme and base styles by modifying the tailwind.config.cjs file located in the root directory.
+Tailwind CSS is a utility-first CSS framework that provides predefined classes for building and designing UI directly within JSX. Briziq Dashboard utilizes Tailwind as its core CSS framework, with most UI elements built entirely using its features. You can easily update the theme and base styles by modifying the tailwind.config.cjs file located in the root directory.
 
 ## Tooling
 

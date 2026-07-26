@@ -2,7 +2,7 @@
 
 Next.js provides a built-in API routing system, enabling you to define backend functionality directly within your application. This system allows you to handle requests, process data, and communicate with external services seamlessly, all while colocating your API logic with your Next.js project structure.
 
-In this section, we'll explore how APIs work in Next.js, provide examples of creating API routes, and demonstrate how it work with AgriHype Dashboard.
+In this section, we'll explore how APIs work in Next.js, provide examples of creating API routes, and demonstrate how it work with Briziq Dashboard.
 
 ## How API Routes Work
 

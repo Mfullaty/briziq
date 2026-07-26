@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 const pageMeta: Metadata = {
-    title: 'AgriHype Dashboard - The Ultimate Next & TypeScript Web Template',
+    title: 'Briziq Dashboard - The Ultimate Next & TypeScript Web Template',
     description:
         'Admin Template and Starter Kit with React, Tailwind Components and Next.js',
     icons: {

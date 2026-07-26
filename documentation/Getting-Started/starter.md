@@ -2,7 +2,7 @@
 
 As mentioned in the Installation section, we've provided a starter version with the essential core components and basic functionality setup. We highly recommend that developers use this version as the foundation for building their apps.
 
-When you open the starter pack in your local environment, you'll be directed to the login page. You can sign in using the credentials user email: admin@agrihype.com | password: admin@agrihype.com
+When you open the starter pack in your local environment, you'll be directed to the login page. You can sign in using the credentials user email: admin@briziq.com | password: admin@briziq.com
 
 ## Default Configurations
 

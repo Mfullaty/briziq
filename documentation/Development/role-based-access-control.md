@@ -1,6 +1,6 @@
 # Role-Based Access Control (RBAC)
 
-AgriHype Dashboard implements **role-based access control** on top of NextAuth sessions using a simple `authority` (roles) array. RBAC is enforced in two places:
+Briziq Dashboard implements **role-based access control** on top of NextAuth sessions using a simple `authority` (roles) array. RBAC is enforced in two places:
 
 - **Routing & middleware** – decides whether a signed-in user can access a route.
 - **Navigation & UI** – decides whether to show or hide specific navigation items or UI sections.
@@ -104,7 +104,7 @@ export const signInUserData = [
         id: '21',
         avatar: '',
         userName: 'John Doe',
-        email: 'admin@agrihype.com',
+        email: 'admin@briziq.com',
         authority: ['admin', 'user'],
         password: 'admin123@Xy',
         accountUserName: 'admin',

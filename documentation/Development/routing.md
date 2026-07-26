@@ -1,6 +1,6 @@
 # Routing
 
-AgriHype Dashboard routing follows the Next.js App Router conventions, it uses a file-based routing system where each file in the /app directory corresponds to a route in your application. Subfolders represent nested routes, making it easy to structure complex navigation.
+Briziq Dashboard routing follows the Next.js App Router conventions, it uses a file-based routing system where each file in the /app directory corresponds to a route in your application. Subfolders represent nested routes, making it easy to structure complex navigation.
 
 For detailed information & concepts about the Next.js App Router, please refer to the documentation
 
@@ -79,7 +79,7 @@ export const protectedRoutes = {
 
 ## Authority
 
-AgriHype Dashboard routes support simple role-based access control. You can specify the roles that have access to a route by using the authority field. For example, the following route is only accessible to users with the 'admin' or 'user' roles. If the authority field is left as an empty array, the route will be open to all roles.
+Briziq Dashboard routes support simple role-based access control. You can specify the roles that have access to a route by using the authority field. For example, the following route is only accessible to users with the 'admin' or 'user' roles. If the authority field is left as an empty array, the route will be open to all roles.
 
 ```ts
 export const protectedRoutes = [

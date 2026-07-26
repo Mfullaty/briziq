@@ -1,6 +1,6 @@
 # Layouts
 
-AgriHype Dashboard provides 6 types of post login layouts & 3 types of auth layouts. All layouts component can be found under directory `src/components/layouts/PostLoginLayout/components` and all the components used within layouts can be found under `src/components/template/`.
+Briziq Dashboard provides 6 types of post login layouts & 3 types of auth layouts. All layouts component can be found under directory `src/components/layouts/PostLoginLayout/components` and all the components used within layouts can be found under `src/components/template/`.
 
 ## Post Login Layouts
 
