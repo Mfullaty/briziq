@@ -19,6 +19,7 @@
     "@fullcalendar/timegrid": "^6.1.18",
     "@hello-pangea/dnd": "^18.0.1",
     "@hookform/resolvers": "^5.2.1",
+    "@prisma/client": "^7.9.0",
     "@tanstack/match-sorter-utils": "^8.19.4",
     "@tanstack/react-table": "^8.20.5",
     "@tanstack/react-virtual": "^3.11.2",
@@ -90,6 +91,7 @@
     "postcss": "^8.4.45",
     "postcss-nesting": "^13.0.0",
     "prettier": "^3.4.2",
+    "prisma": "^7.9.0",
     "tailwindcss": "^4.0.4",
     "typescript": "^5"
   },

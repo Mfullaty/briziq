@@ -5,6 +5,9 @@
 @layer theme {
 	:root {
 		--neutral: #ffffff;
+		--base: #ECF0F3;
+		--shadow-dark: #D1D9E6;
+		--shadow-light: #FFFFFF;
 		--primary: #2a85ff;
 		--primary-deep: #0069f6;
 		--primary-mild: #4996ff;
@@ -32,6 +35,9 @@
 
 	.dark {
 		--neutral: #ffffff;
+		--base: #1e293b; /* Adjusted for dark mode if needed, but AC doesn't specify */
+		--shadow-dark: #0f172a;
+		--shadow-light: #334155;
 		--primary: #2a85ff;
 		--primary-deep: #0069f6;
 		--primary-mild: #4996ff;

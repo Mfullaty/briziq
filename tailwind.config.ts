@@ -58,6 +58,9 @@ const config: Config = {
 		},
 		extend: {
 			colors: {
+				'base': 'var(--base)',
+				'shadow-dark': 'var(--shadow-dark)',
+				'shadow-light': 'var(--shadow-light)',
 				'primary': 'var(--primary)',
 				'primary-deep': 'var(--primary-deep)',
 				'primary-mild': 'var(--primary-mild)',
