@@ -69,12 +69,12 @@ journey
  section Transaction  
  Initiate Secure Trade: 5: Sarah  
  View Heavy Escrow Vault UI: 5: Sarah  
- Fund inside inset gateway via Stripe: 5: Sarah
+ Fund inside inset gateway via Escrow.com: 5: Sarah
 
 - **1\. The Landing:** Sarah arrives unauthenticated. Above a deep, inset search well, text softly fades through prompts: _"Search Trusted Exporters...", "Looking for Genuine Agro Marketplace?", "What should I export today?"_. Below sits an extruded carousel of premium exporters.
 - **2\. The Query:** She types "Split dried ginger 250 metric tons Germany" and hits enter. Stamped directly onto the flat background, she reads the Market Intelligence. Floating above this background are 3 extruded Recommended Export Partner cards.
 - **3\. Due Diligence:** She spots the "Confident" engraved seal deeply inset on Tunde's card. She clicks it, consulting the AI Assistant to verify his NXP certificates.
-- **4\. Escrow Initiation:** Sarah clicks "Request Secure Trade." The UI shifts entirely. A massive, heavily extruded "Vault Door" container appears. Inside its thick frame is a deeply inset well holding the Stripe payment gateway. It physically feels like she is placing the $50,000 inside a secure safe.
+- **4\. Escrow Initiation:** Sarah clicks "Request Secure Trade." The UI shifts entirely. A massive, heavily extruded "Vault Door" container appears. Inside its thick frame is a deeply inset well holding the Escrow.com payment gateway. It physically feels like she is placing the $50,000 inside a secure safe.
 
 ### **UJ-2: Tunde builds his export reputation**
 

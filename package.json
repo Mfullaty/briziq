@@ -1,5 +1,6 @@
 {
   "name": "briziq",
+  "type": "module",
   "version": "1.2.5",
   "private": true,
   "scripts": {
@@ -8,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "npx prettier src --check",
-    "prettier:fix": "npm run prettier -- --write"
+    "prettier:fix": "npm run prettier -- --write",
+    "contract:emit": "prisma contract emit"
   },
   "dependencies": {
     "@floating-ui/react": "^0.27.16",
@@ -20,6 +22,9 @@
     "@hello-pangea/dnd": "^18.0.1",
     "@hookform/resolvers": "^5.2.1",
     "@prisma/client": "^7.9.0",
+    "@prisma/orm-postgres": "^8.0.0-rc.8",
+    "@supabase/ssr": "^0.12.5",
+    "@supabase/supabase-js": "^2.112.4",
     "@tanstack/match-sorter-utils": "^8.19.4",
     "@tanstack/react-table": "^8.20.5",
     "@tanstack/react-virtual": "^3.11.2",
@@ -27,18 +32,20 @@
     "@tiptap/react": "^2.10.4",
     "@tiptap/starter-kit": "^2.10.4",
     "@visx/pattern": "^3.13.0-alpha.0",
+    "ai": "^7.0.83",
     "axios": "^1.7.7",
     "classnames": "^2.5.1",
     "d3-dsv": "^3.0.1",
     "d3-fetch": "^3.0.1",
     "d3-scale": "^4.0.2",
     "dayjs": "^1.11.13",
+    "dotenv": "^17.4.2",
     "framer-motion": "12.23.6",
     "gantt-task-react": "^0.3.9",
     "html-react-parser": "^5.2.1",
     "lodash": "^4.17.21",
     "marked": "^16.2.0",
-    "next": "^15.5.6",
+    "next": "^16.3.3",
     "next-auth": "^5.0.0-beta.25",
     "next-intl": "^4.3.4",
     "react": "19.0.0",
@@ -65,6 +72,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@prisma/cli-engine": "^0.2.3",
     "@tailwindcss/postcss": "^4.0.0",
     "@tailwindcss/typography": "^0.5.15",
     "@types/d3-fetch": "^3.0.7",
@@ -91,7 +99,7 @@
     "postcss": "^8.4.45",
     "postcss-nesting": "^13.0.0",
     "prettier": "^3.4.2",
-    "prisma": "^7.9.0",
+    "prisma": "^8.0.0-rc.10",
     "tailwindcss": "^4.0.4",
     "typescript": "^5"
   },

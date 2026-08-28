@@ -65,7 +65,7 @@ import Simple from '@/components/layouts/AuthLayout/Simple'
 
 const Layout = ({ children }: { children: ReactNode }) => {
     return (
-        <div className="flex flex-auto flex-col h-[100vh]">
+        <div className="flex flex-auto flex-col h-screen">
             <Simple>
                 <Side>
                     {children}

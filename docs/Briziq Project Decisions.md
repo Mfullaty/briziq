@@ -1,5 +1,8 @@
-* **Tech Stack:** Next.js 16, Tailwind CSS v4, shadcn/ui.  
-* **Visual Direction:** Neumorphism (Light and Dark modes required).  
+* **Tech Stack:** Next.js 16, Tailwind CSS v4, shadcn/ui.
+* **Backend:** Prisma ORM connected to a Supabase PostgreSQL database. Client-side fetching via Axios and thin service layers calling Next.js API Routes.
+* **AI Provider:** Gemini for OCR, verification flagging, and AI Assistant interactions.
+* **Escrow Providers:** TazaPay (for $100-$14,000) and Escrow.com (for >$14,000).
+* **Visual Direction:** Neumorphism (Light and Dark modes required).
 * **Scope:** V1 aggressive; all features included to secure seed funding.  
 * **Escrow Logic:** 7-day auto-release timer upon verified logistics delivery.  
 * **Verification:** Human-in-the-loop required for "Confident" badge; AI does parsing only.  

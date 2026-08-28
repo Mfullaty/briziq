@@ -36,7 +36,7 @@ Briziq is an AI-first B2B SaaS marketplace designed to eliminate the trust defic
         - Sarah clicks a recommended exporter and views **Export Intelligence**: verified export licenses, inspection reports, and an **AI Risk Assessment** showing "Low Risk".
         - Interacts with the AI Assistant, which confirms past EU customs success and displays Briziq-verified certificates.
         - Sarah clicks "Request Secure Trade".
-    - **Climax:** System generates a **Secure Trade** summary. The UI explicitly states funds are held based on contractual shipment milestones. Sarah approves the $50,000 transfer to escrow via Stripe.
+    - **Climax:** System generates a **Secure Trade** summary. The UI explicitly states funds are held based on contractual shipment milestones. Sarah approves the $50,000 transfer to escrow via Escrow.com.
     - **Resolution:** The trade is locked, funds are secured, and the fulfillment process begins.
 
 journey  
@@ -50,7 +50,7 @@ journey
  Consult AI Assistant on logistics: 4: Sarah  
  section Transaction  
  Initiate Secure Trade: 5: Sarah  
- Fund escrow via Stripe: 5: Sarah
+ Fund escrow via Escrow.com: 5: Sarah
 
 - **UJ-2. Tunde builds his export reputation and achieves Confident status.**
     - **Persona \+ context:** Tunde Adebayo, owner of Adebayo Agro Exports Ltd (Kaduna, Nigeria). Has 300 MT of quality ginger but struggles to prove credibility to international buyers.
