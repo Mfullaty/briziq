@@ -21,14 +21,14 @@
 
   .step-item-icon {
     min-width: 2.25rem;
-    @apply text-lg rounded-full w-9 h-9 flex items-center justify-center font-semibold;
+    @apply text-lg rounded-full w-9 h-9 flex items-center justify-center font-semibold bg-base;
 
     &.step-item-icon-pending {
-      @apply border-2 border-gray-300 dark:border-gray-600;
+      @apply shadow-neo;
     }
 
     &.step-item-icon-current {
-      @apply border-2;
+      @apply shadow-neo-inner;
     }
   }
 
@@ -45,7 +45,7 @@
   }
 
   .step-item-icon-error {
-    @apply border-2 border-red-500 text-red-500;
+    @apply shadow-neo-inner text-red-500;
   }
 
   .step-clickable {
@@ -61,7 +61,7 @@
     @apply w-full;
 
     &.inactive {
-      @apply bg-gray-200 dark:bg-gray-600;
+      @apply bg-base shadow-neo-inner;
     }
 
     &.step-connect-vertical {

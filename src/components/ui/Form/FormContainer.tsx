@@ -35,7 +35,7 @@ const FormContainer = (props: FormContainerProps) => {
                     return (
                         <div
                             className={classNames(
-                                'form-container',
+                                'form-container bg-base shadow-neo rounded-3xl p-8',
                                 context?.layout,
                                 className,
                             )}

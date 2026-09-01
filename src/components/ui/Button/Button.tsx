@@ -119,24 +119,24 @@ const Button = (props: ButtonProps) => {
         return sizeClass
     }
 
-    const disabledClass = 'opacity-50 cursor-not-allowed'
+    const disabledClass = 'opacity-50 cursor-not-allowed shadow-neo-flat'
 
     const solidColor = () => {
         const btn = {
-            bgColor: active ? `bg-primary-deep` : `bg-primary`,
-            textColor: 'text-neutral',
-            hoverColor: active ? '' : `hover:bg-primary-mild`,
-            activeColor: ``,
+            bgColor: active ? `bg-base shadow-neo-inner` : `bg-base shadow-neo`,
+            textColor: 'text-primary font-semibold',
+            hoverColor: active ? '' : `hover:shadow-neo-inner transition-shadow`,
+            activeColor: `active:shadow-neo-inner`,
         }
         return getBtnColor(btn)
     }
 
     const plainColor = () => {
         const btn = {
-            bgColor: active ? `` : `dark:primary-mild dark:bg-opacity-20`,
-            textColor: ``,
-            hoverColor: active ? '' : `hover:text-primary-mild`,
-            activeColor: `dark:active:primary-mild dark:active:bg-opacity-40`,
+            bgColor: active ? `bg-base shadow-neo-inner` : `bg-base shadow-neo-flat`,
+            textColor: `text-primary font-semibold`,
+            hoverColor: active ? '' : `hover:shadow-neo transition-shadow`,
+            activeColor: `active:shadow-neo-inner`,
         }
         return getBtnColor(btn)
     }
@@ -144,13 +144,13 @@ const Button = (props: ButtonProps) => {
     const defaultColor = () => {
         const btn = {
             bgColor: active
-                ? `bg-gray-100 border border-gray-300 dark:bg-gray-500 dark:border-gray-500`
-                : `bg-white border border-gray-300 dark:bg-gray-700 dark:border-gray-700`,
-            textColor: `text-gray-600 dark:text-gray-100`,
+                ? `bg-base shadow-neo-inner`
+                : `bg-base shadow-neo`,
+            textColor: `text-gray-700 dark:text-gray-100 font-semibold`,
             hoverColor: active
                 ? ''
-                : `ring-primary dark:ring-white hover:border-primary dark:hover:border-white hover:ring-1 hover:text-primary dark:hover:text-white dark:hover:bg-transparent`,
-            activeColor: ``,
+                : `hover:shadow-neo-inner transition-shadow`,
+            activeColor: `active:shadow-neo-inner`,
         }
         return getBtnColor(btn)
     }
@@ -161,9 +161,7 @@ const Button = (props: ButtonProps) => {
         activeColor,
         textColor,
     }: ButtonColor) => {
-        return `${bgColor} ${
-            unclickable ? disabledClass : hoverColor + ' ' + activeColor
-        } ${textColor}`
+        return `${unclickable ? 'bg-base ' + disabledClass : bgColor + ' ' + hoverColor + ' ' + activeColor} ${textColor}`
     }
 
     const btnColor = () => {

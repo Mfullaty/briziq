@@ -93,16 +93,17 @@ const Switcher = (props: SwitcherProps) => {
         <label
             ref={labelRef}
             className={classNames(
-                'switcher',
+                'switcher relative inline-flex h-7 w-14 items-center rounded-full bg-base shadow-neo-inner transition-all',
                 (switcherChecked || controlProps.checked) &&
                     `switcher-checked ${switcherColor}`,
-                disabled && 'switcher-disabled',
+                disabled && 'opacity-50 shadow-none',
                 className,
             )}
         >
             <input
                 ref={ref}
                 type="checkbox"
+                className="opacity-0 absolute inset-0 w-full h-full cursor-pointer peer"
                 disabled={disabled}
                 readOnly={readOnly}
                 name={name}
@@ -120,9 +121,13 @@ const Switcher = (props: SwitcherProps) => {
                     )}
                 />
             ) : (
-                <div className="switcher-toggle" />
+                <div className={classNames(
+                    "switcher-toggle absolute top-1 h-5 w-5 rounded-full bg-base shadow-neo transition-all",
+                    (switcherChecked || controlProps.checked) ? "translate-x-7" : "translate-x-0",
+                    "left-1"
+                )} />
             )}
-            <span className="switcher-content">
+            <span className="switcher-content z-10">
                 {switcherChecked ? checkedContent : unCheckedContent}
             </span>
         </label>

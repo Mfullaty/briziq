@@ -20,7 +20,7 @@
   }
 
   .timeline-item-media-default {
-    @apply rounded-full bg-gray-200 dark:bg-gray-600 h-4 w-4;
+    @apply rounded-full bg-base shadow-neo-inner h-4 w-4;
   }
 
   .timeline-item-wrapper {

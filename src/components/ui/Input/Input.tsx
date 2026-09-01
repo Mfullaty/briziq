@@ -80,18 +80,19 @@ const Input = (props: InputProps) => {
 
     const inputDefaultClass = 'input'
     const inputSizeClass = `input-${inputSize} ${CONTROL_SIZES[inputSize].h}`
-    const inputFocusClass = `focus:ring-primary focus-within:ring-primary focus-within:border-primary focus:border-primary`
+    const inputFocusClass = `focus:shadow-neo focus-within:shadow-neo`
     const inputWrapperClass = classNames(
         'input-wrapper',
         prefix || suffix ? className : '',
     )
     const inputClass = classNames(
         inputDefaultClass,
+        'bg-base shadow-neo-inner rounded-xl transition-shadow',
         inputSizeClass,
         !isInputInvalid && inputFocusClass,
         !prefix && !suffix ? className : '',
-        disabled && 'input-disabled',
-        isInputInvalid && 'input-invalid',
+        disabled && 'input-disabled shadow-neo-flat',
+        isInputInvalid && 'input-invalid border border-red-500',
         textArea && 'input-textarea',
     )
 

@@ -52,7 +52,7 @@
   }
 
   .select-menu {
-    @apply z-30! bg-white dark:bg-gray-900 rounded-xl my-2 px-2 py-1 min-h-[50px] border ring-1 border-gray-100 ring-gray-100 dark:border-gray-700 dark:ring-gray-700 shadow-[0px_48px_64px_-16px_rgba(0,0,0,0.25)];
+    @apply z-30! bg-base shadow-neo rounded-xl my-2 px-2 py-1 min-h-[50px];
   }
 
   .select-option {

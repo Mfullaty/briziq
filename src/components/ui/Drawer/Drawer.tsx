@@ -52,40 +52,33 @@ const Drawer = (props: DrawerProps) => {
 
     const getStyle = (): {
         dimensionClass?: string
-        contentStyle?: {
-            width?: string | number
-            height?: string | number
-        }
-        motionStyle: {
-            [x: string]: string
-        }
+        contentStyle?: any
+        motionStyle: any
     } => {
         if (placement === 'left' || placement === 'right') {
             return {
-                dimensionClass: 'vertical',
+                dimensionClass: `h-full absolute top-0 ${placement === 'right' ? 'right-0' : 'left-0'}`,
                 contentStyle: { width },
                 motionStyle: {
-                    [placement]: `-${width}${
-                        typeof width === 'number' && 'px'
-                    }`,
+                    x: placement === 'right' ? '100%' : '-100%',
+                    y: 0,
                 },
             }
         }
 
         if (placement === 'top' || placement === 'bottom') {
             return {
-                dimensionClass: 'horizontal',
+                dimensionClass: `w-full absolute left-0 ${placement === 'bottom' ? 'bottom-0' : 'top-0'}`,
                 contentStyle: { height },
                 motionStyle: {
-                    [placement]: `-${height}${
-                        typeof height === 'number' && 'px'
-                    }`,
+                    x: 0,
+                    y: placement === 'bottom' ? '100%' : '-100%',
                 },
             }
         }
 
         return {
-            motionStyle: {},
+            motionStyle: { x: 0, y: 0 },
         }
     }
 
@@ -94,22 +87,22 @@ const Drawer = (props: DrawerProps) => {
     return (
         <Modal
             className={{
-                base: classNames('drawer', className as string),
-                afterOpen: 'drawer-after-open',
-                beforeClose: 'drawer-before-close',
+                base: classNames('fixed inset-0 z-50 outline-none pointer-events-none', className as string),
+                afterOpen: '',
+                beforeClose: '',
             }}
             overlayClassName={{
                 base: classNames(
-                    'drawer-overlay',
+                    'fixed inset-0 z-40 bg-gray-900/50 backdrop-blur-sm transition-opacity duration-300 opacity-0',
                     overlayClassName as string,
                     !showBackdrop && 'bg-transparent',
                 ),
-                afterOpen: 'drawer-overlay-after-open',
-                beforeClose: 'drawer-overlay-before-close',
+                afterOpen: 'opacity-100',
+                beforeClose: 'opacity-0',
             }}
             portalClassName={classNames('drawer-portal', portalClassName)}
             bodyOpenClassName={classNames(
-                'drawer-open',
+                'overflow-hidden',
                 lockScroll && 'drawer-lock-scroll',
                 bodyOpenClassName,
             )}
@@ -119,30 +112,30 @@ const Drawer = (props: DrawerProps) => {
             {...rest}
         >
             <motion.div
-                className={classNames('drawer-content', dimensionClass)}
+                className={classNames('bg-base shadow-neo pointer-events-auto flex flex-col', dimensionClass)}
                 style={contentStyle}
                 initial={motionStyle}
                 animate={{
-                    [placement as 'top' | 'right' | 'bottom' | 'left']: isOpen
-                        ? 0
-                        : motionStyle[placement],
+                    x: isOpen ? 0 : motionStyle.x,
+                    y: isOpen ? 0 : motionStyle.y,
                 }}
+                transition={{ type: 'spring', bounce: 0, duration: 0.3 }}
             >
                 {title || closable ? (
-                    <div className={classNames('drawer-header', headerClass)}>
+                    <div className={classNames('flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700', headerClass)}>
                         {typeof title === 'string' ? (
-                            <h4>{title}</h4>
+                            <h4 className="text-lg font-semibold">{title}</h4>
                         ) : (
                             <span>{title}</span>
                         )}
                         {closable && renderCloseButton}
                     </div>
                 ) : null}
-                <div className={classNames('drawer-body', bodyClass)}>
+                <div className={classNames('flex-1 overflow-y-auto p-4', bodyClass)}>
                     {children}
                 </div>
                 {footer && (
-                    <div className={classNames('drawer-footer', footerClass)}>
+                    <div className={classNames('p-4 border-t border-gray-200 dark:border-gray-700', footerClass)}>
                         {footer}
                     </div>
                 )}

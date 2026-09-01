@@ -1,5 +1,5 @@
 @layer components {
     .alert {
-        @apply p-4 relative flex;
+        @apply p-4 relative flex rounded-xl bg-base shadow-neo border-l-4;
     }
 }

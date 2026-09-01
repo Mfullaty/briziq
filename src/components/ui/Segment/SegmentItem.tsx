@@ -101,10 +101,10 @@ const SegmentItem = (props: SegmentItemProps) => {
         <button
             ref={ref}
             className={classNames(
-                'segment-item',
+                'segment-item rounded-lg transition-all',
                 getSegmentSize(),
-                active && 'segment-item-active',
-                disabled && 'segment-item-disabled',
+                active ? 'bg-base shadow-neo text-primary font-semibold' : 'hover:bg-base hover:shadow-neo-flat text-gray-500',
+                disabled && 'opacity-50 cursor-not-allowed shadow-none',
                 className,
             )}
             onClick={onSegmentItemClick}

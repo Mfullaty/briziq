@@ -30,28 +30,28 @@ const DEFAULT_TYPE = 'warning'
 
 const TYPE_MAP = {
     success: {
-        backgroundColor: 'bg-success-subtle',
+        backgroundColor: 'border-success',
         titleColor: 'text-success',
         textColor: 'text-success',
         iconColor: 'text-success',
         icon: <HiCheckCircle />,
     },
     info: {
-        backgroundColor: 'bg-info-subtle',
+        backgroundColor: 'border-info',
         titleColor: 'text-info',
         textColor: 'text-info',
         iconColor: 'text-info',
         icon: <HiInformationCircle />,
     },
     warning: {
-        backgroundColor: 'bg-warning-subtle',
+        backgroundColor: 'border-warning',
         titleColor: 'text-warning',
         textColor: 'text-warning',
         iconColor: 'text-warning',
         icon: <HiExclamation />,
     },
     danger: {
-        backgroundColor: 'bg-error-subtle',
+        backgroundColor: 'border-error',
         titleColor: 'text-error',
         textColor: 'text-error',
         iconColor: 'text-error',
@@ -130,14 +130,13 @@ const Alert = (props: AlertProps) => {
     }
 
     const alertClass = classNames(
-        'alert',
+        'alert bg-base shadow-neo',
         typeMap.backgroundColor,
         typeMap.textColor,
         !title ? 'font-semibold' : '',
         closable ? 'justify-between' : '',
         closable && !title ? 'items-center' : '',
-        !triggerByToast && 'rounded-xl',
-
+        triggerByToast && 'rounded-none',
         className,
     )
 

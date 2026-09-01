@@ -41,11 +41,11 @@ const Tooltip = (props: TooltipProps) => {
     const [tooltipOpen, setTooltipOpen] = useState<boolean>(isOpen)
 
     const tooltipColor = {
-        background: 'bg-gray-800 dark:bg-black',
-        arrow: 'text-gray-800 dark:text-black',
+        background: 'bg-base',
+        arrow: 'text-gray-100 dark:text-gray-900', // Matches bg-base typically
     }
 
-    const defaultTooltipClass = `tooltip ${tooltipColor.background}`
+    const defaultTooltipClass = `tooltip ${tooltipColor.background} shadow-neo rounded-lg text-gray-700 dark:text-gray-200`
 
     const { refs, floatingStyles, context } = useFloating({
         open: isOpen,

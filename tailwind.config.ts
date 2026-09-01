@@ -100,6 +100,12 @@ const config: Config = {
 					},
 				},
 			}),
+			boxShadow: {
+				'neo': '8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light)',
+				'neo-inner': 'inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light)',
+				'neo-deep': 'inset 10px 10px 20px var(--shadow-dark), inset -10px -10px 20px var(--shadow-light)',
+				'neo-flat': 'none',
+			},
 		},
 	},
 	plugins: [

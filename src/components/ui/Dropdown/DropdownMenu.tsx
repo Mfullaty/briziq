@@ -42,8 +42,8 @@ import type { HTMLProps, FocusEvent, MouseEvent, ReactNode, Ref } from 'react'
 
 export interface DropdownMenuProps
     extends CommonProps,
-        DropdownToggleSharedProps,
-        DropdownSubItemSharedProps {
+    DropdownToggleSharedProps,
+    DropdownSubItemSharedProps {
     activeKey?: string
     title?: string | ReactNode
     menuClass?: string
@@ -241,11 +241,11 @@ const DropdownMenu = (props: DropdownMenuProps & HTMLProps<HTMLElement>) => {
         ),
         ...(trigger === 'context'
             ? {
-                  onContextMenu: (e: MouseEvent<HTMLElement>) => {
-                      e.preventDefault()
-                      handleOpen(true)
-                  },
-              }
+                onContextMenu: (e: MouseEvent<HTMLElement>) => {
+                    e.preventDefault()
+                    handleOpen(true)
+                },
+            }
             : {}),
     }
 
@@ -306,7 +306,7 @@ const DropdownMenu = (props: DropdownMenuProps & HTMLProps<HTMLElement>) => {
                                 >
                                     <ul
                                         className={classNames(
-                                            'dropdown-menu min-w-[160px]',
+                                            'dropdown-menu min-w-40 bg-base shadow-neo rounded-xl p-2',
                                             menuClass,
                                         )}
                                         style={styles}

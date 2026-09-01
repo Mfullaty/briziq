@@ -37,7 +37,7 @@ const TabNav = (props: TabNavProps) => {
         `tab-nav-${variant}`,
         isSelected && `tab-nav-active text-primary`,
         isSelected && variant === 'underline' && `border-primary`,
-        isSelected && variant === 'pill' && `bg-primary text-neutral`,
+        isSelected && variant === 'pill' && `bg-base shadow-neo text-primary font-semibold rounded-lg`,
         disabled && 'tab-nav-disabled',
         !disabled && !isSelected && `hover:text-primary`,
         className,

@@ -106,7 +106,7 @@ const Radio = (props: RadioProps) => {
                     ref={ref}
                     type="radio"
                     className={classNames(
-                        radioDefaultClass,
+                        "appearance-none w-5 h-5 rounded-full bg-base shadow-neo-inner outline-none transition-all",
                         radioColorClass,
                         radioClass,
                     )}

@@ -46,54 +46,51 @@ const Dialog = (props: DialogProps) => {
         />
     )
 
-    const contentStyle = {
-        content: {
-            inset: 'unset',
-        },
+    const contentStyle: any = {
         ...style,
     }
 
     if (width !== undefined) {
-        contentStyle.content.width = width
+        contentStyle.width = width
 
         if (
             typeof currentSize.width !== 'undefined' &&
             currentSize.width <= width
         ) {
-            contentStyle.content.width = 'auto'
+            contentStyle.width = 'auto'
         }
     }
 
     if (height !== undefined) {
-        contentStyle.content.height = height
+        contentStyle.height = height
     }
 
-    const defaultDialogContentClass = 'dialog-content'
+    const defaultDialogContentClass = 'dialog-content bg-base shadow-neo rounded-3xl pointer-events-auto p-6 relative'
 
     const dialogClass = classNames(defaultDialogContentClass, contentClassName)
 
     return (
         <Modal
             className={{
-                base: classNames('dialog', className as string),
-                afterOpen: 'dialog-after-open',
-                beforeClose: 'dialog-before-close',
+                base: classNames('fixed inset-0 z-50 flex items-center justify-center outline-none pointer-events-none', className as string),
+                afterOpen: '',
+                beforeClose: '',
             }}
             overlayClassName={{
-                base: classNames('dialog-overlay', overlayClassName as string),
-                afterOpen: 'dialog-overlay-after-open',
-                beforeClose: 'dialog-overlay-before-close',
+                base: classNames('fixed inset-0 z-40 bg-gray-900/50 backdrop-blur-sm transition-opacity duration-150 opacity-0', overlayClassName as string),
+                afterOpen: 'opacity-100',
+                beforeClose: 'opacity-0',
             }}
             portalClassName={classNames('dialog-portal', portalClassName)}
-            bodyOpenClassName={classNames('dialog-open', bodyOpenClassName)}
+            bodyOpenClassName={classNames('overflow-hidden', bodyOpenClassName)}
             ariaHideApp={false}
             isOpen={isOpen}
-            style={{ ...contentStyle }}
             closeTimeoutMS={closeTimeoutMS}
             {...rest}
         >
             <motion.div
                 className={dialogClass}
+                style={contentStyle}
                 initial={{ transform: 'scale(0.9)' }}
                 animate={{
                     transform: isOpen ? 'scale(1)' : 'scale(0.9)',

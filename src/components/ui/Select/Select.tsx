@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import React from 'react'
 import cn from '../utils/classNames'
 import ReactSelect from 'react-select'
 import CreatableSelect from 'react-select/creatable'
@@ -103,10 +104,13 @@ function Select<
 
     const isSelectInvalid = invalid || formItemInvalid
 
+    const selectId = React.useId()
+
     const selectClass = cn(`select select-${selectSize}`, className)
 
     return (
         <Component<Option, IsMulti, Group>
+            instanceId={selectId}
             className={selectClass}
             classNames={
                 {
@@ -117,14 +121,14 @@ function Select<
                             state.isDisabled && 'opacity-50 cursor-not-allowed',
                             (() => {
                                 const classes: string[] = [
-                                    'bg-gray-100 dark:bg-gray-700',
+                                    'bg-base shadow-neo-inner',
                                 ]
 
                                 const { isFocused } = state
 
                                 if (isFocused) {
                                     classes.push(
-                                        'select-control-focused ring-1 ring-primary border-primary bg-transparent',
+                                        'select-control-focused ring-1 ring-primary border-primary',
                                     )
                                 }
 

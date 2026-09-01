@@ -64,9 +64,9 @@ const Card = (props: CardProps) => {
 
     const cardClass = classNames(
         'card',
+        'bg-base shadow-neo rounded-2xl',
         className,
-        bordered ? `card-border` : `card-shadow`,
-        clickable && 'cursor-pointer user-select-none',
+        clickable && 'cursor-pointer user-select-none hover:shadow-neo-inner active:shadow-neo-inner transition-shadow',
     )
 
     const cardBodyClasss = classNames('card-body', bodyClass)

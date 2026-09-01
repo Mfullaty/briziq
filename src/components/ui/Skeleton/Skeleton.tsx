@@ -27,9 +27,9 @@ const Skeleton = (props: SkeletonProps) => {
         <Component
             ref={ref}
             className={classNames(
-                'skeleton',
-                variant === 'circle' && 'skeleton-circle',
-                variant === 'block' && 'skeleton-block',
+                'skeleton bg-base shadow-neo-inner',
+                variant === 'circle' && 'skeleton-circle rounded-full',
+                variant === 'block' && 'skeleton-block rounded-2xl',
                 animation && 'animate-pulse',
                 className,
             )}

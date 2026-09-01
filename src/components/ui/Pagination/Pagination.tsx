@@ -99,10 +99,10 @@ const Pagination = (props: PaginationProps) => {
     }
 
     const pagerClass = {
-        default: 'pagination-pager',
+        default: 'pagination-pager bg-base shadow-neo-flat rounded-lg',
         inactive: 'pagination-pager-inactive',
-        active: `text-primary dark:bg-primary dark:text-neutral`,
-        disabled: 'pagination-pager-disabled',
+        active: `text-primary shadow-neo-inner rounded-lg`,
+        disabled: 'pagination-pager-disabled opacity-50 shadow-none',
     }
 
     const paginationClass = classNames('pagination', className)

@@ -31,7 +31,7 @@ const Table = (props: TableProps) => {
     )
 
     return (
-        <div className={classNames(overflow && 'overflow-x-auto')}>
+        <div className={classNames(overflow && 'overflow-x-auto', 'bg-base shadow-neo rounded-3xl p-4')}>
             <Component className={tableClass} {...rest} ref={ref}>
                 {children}
             </Component>

@@ -109,7 +109,7 @@ const Checkbox = (props: CheckboxProps) => {
     const checkboxColor =
         checkboxClass || checkboxClassContext || `text-primary`
 
-    const checkboxDefaultClass = `checkbox peer ${checkboxColor}`
+    const checkboxDefaultClass = `checkbox peer ${checkboxColor} bg-base shadow-neo-inner`
     const checkboxColorClass = disabled && 'disabled'
     const labelDefaultClass = `checkbox-label`
     const labelDisabledClass = disabled && 'disabled'

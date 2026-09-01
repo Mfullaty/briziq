@@ -23,14 +23,14 @@ const Badge = (props: BadgeProps) => {
     } = props
 
     const badgeBaseClass =
-        'rounded-full text-xs font-semibold bg-error text-white'
+        'rounded-full text-xs font-semibold'
 
     const dot = typeof content !== 'number' && typeof content !== 'string'
 
     const badgeClass = classNames(
         dot
-            ? 'badge-dot w-3 h-3 border border-white dark:border-gray-900'
-            : 'badge px-2 py-1 min-w-6',
+            ? 'badge-dot w-3 h-3 bg-error border border-white dark:border-gray-900'
+            : 'badge px-2 py-1 min-w-6 bg-base shadow-neo-inner text-gray-700 dark:text-gray-300',
         badgeBaseClass,
         innerClass,
     )
