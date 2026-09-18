@@ -10,6 +10,7 @@ export const apexLineChartDefaultOption: ApexOptions = {
             show: false,
         },
     },
+    
     colors: [...COLORS],
     dataLabels: {
         enabled: false,
