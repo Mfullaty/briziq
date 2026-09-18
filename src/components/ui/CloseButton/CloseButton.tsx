@@ -17,14 +17,14 @@ const CloseButton = (props: CloseButtonProps) => {
     const closeButtonAbsoluteClass = 'absolute z-10'
 
     const closeButtonClass = classNames(
-        !resetDefaultClass && 'close-button button-press-feedback',
+        !resetDefaultClass && 'close-button button-press-feedback inline-flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white',
         absolute && closeButtonAbsoluteClass,
         className,
     )
 
     return (
         <button ref={ref} className={closeButtonClass} type="button" {...rest}>
-            <HiX />
+            <HiX className="w-4 h-4" />
         </button>
     )
 }

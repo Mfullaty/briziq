@@ -102,7 +102,7 @@ const BasePicker = (props: BasePickerProps) => {
                 {clearButton}
             </div>
         ) : (
-            <CloseButton className="text-base" onClick={onClear} />
+            <CloseButton onClick={onClear} />
         )
     ) : inputSuffix ? (
         <>{inputSuffix}</>

@@ -21,6 +21,14 @@ export const publicRoutes: Routes = {
             pageContainerType: 'contained',
         },
     },
+    '/design-system': {
+        key: 'designSystem',
+        authority: [],
+        meta: {
+            pageBackgroundType: 'plain',
+            pageContainerType: 'contained',
+        },
+    },
 }
 
 export const authRoutes = authRoute
