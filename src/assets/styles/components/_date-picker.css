@@ -1,14 +1,14 @@
 @layer components {
   .date-picker {
-    @apply z-40 max-w-xs shadow-xl dark:shadow-2xl bg-white dark:bg-gray-800 rounded-xl p-4;
+    @apply z-40 max-w-xs bg-base shadow-neo rounded-2xl p-4;
   }
 
   .date-picker-panel {
-    @apply rounded-lg;
+    @apply rounded-xl;
   }
 
   .date-picker-header-label {
-    @apply cursor-pointer mx-0.5 select-none text-gray-900 dark:text-gray-100;
+    @apply cursor-pointer mx-0.5 select-none text-gray-800 dark:text-gray-100 font-semibold hover:text-primary transition-colors;
   }
   .date-picker-current-month {
     @apply text-gray-700 dark:text-gray-100;
@@ -19,39 +19,39 @@
   }
 
   .date-picker-selected-date {
-    @apply text-white;
+    @apply text-primary font-bold;
   }
 
   .date-picker-available {
-    @apply hover:text-white;
+    @apply hover:shadow-neo rounded-full transition-shadow;
   }
 
   .date-picker-today {
-    @apply border;
+    @apply ring-1 ring-inset ring-primary rounded-full;
   }
 
   .date-picker-month-cell {
-    @apply text-center py-6 font-semibold;
+    @apply text-center py-4 font-semibold;
   }
 
   .date-picker-month-cell-disabled {
-    @apply opacity-30 bg-gray-300 cursor-not-allowed;
+    @apply opacity-30 cursor-not-allowed shadow-none;
   }
 
   .date-picker-month-cell-inner {
-    @apply cursor-pointer px-4 py-2 rounded-lg select-none;
+    @apply cursor-pointer px-4 py-2 rounded-xl select-none transition-all;
   }
 
   .date-picker-year-cell {
-    @apply text-center py-6;
+    @apply text-center py-4;
   }
 
   .date-picker-year-cell-inner {
-    @apply cursor-pointer px-4 py-2 rounded-lg select-none font-semibold;
+    @apply cursor-pointer px-4 py-2 rounded-xl select-none font-semibold transition-all;
   }
 
   .date-picker-year-cell-disabled {
-    @apply opacity-30 bg-gray-300 cursor-not-allowed;
+    @apply opacity-30 cursor-not-allowed shadow-none;
   }
 
   .picker {
@@ -59,7 +59,7 @@
   }
 
   .picker-panel {
-    @apply shadow-xl dark:shadow-2xl bg-white dark:bg-gray-900 rounded-2xl p-4 dark:border-2 dark:border-gray-700;
+    @apply bg-base shadow-neo rounded-2xl p-4;
   }
 
   .picker-view {
@@ -75,11 +75,11 @@
   }
 
   .picker-direction-button {
-    @apply text-2xl rounded-full h-10 w-10 flex items-center justify-center hover:text-gray-800 hover:dark:text-gray-100 hover:bg-gray-100 hover:dark:bg-gray-700;
+    @apply text-xl rounded-full h-9 w-9 flex items-center justify-center text-gray-700 dark:text-gray-200 hover:shadow-neo active:shadow-neo-inner transition-all;
   }
 
   .picker-header-label {
-    @apply cursor-pointer mx-0.5 select-none text-gray-900 dark:text-gray-100 text-lg font-semibold;
+    @apply cursor-pointer mx-0.5 select-none text-gray-800 dark:text-gray-100 text-base font-bold hover:text-primary transition-colors;
   }
 
   .year-table,
@@ -92,7 +92,7 @@
   }
 
   .date-picker-cell-selected {
-    @apply text-gray-100;
+    @apply bg-base shadow-neo-inner text-primary font-bold rounded-full;
   }
 
   .date-picker-cell-selected-start {
@@ -116,15 +116,15 @@
   }
 
   .date-picker-cell-hoverable {
-    @apply hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-gray-300;
+    @apply hover:shadow-neo rounded-full transition-shadow text-gray-800 dark:text-gray-100;
   }
 
   .date-picker-cell-disabled {
-    @apply opacity-30 bg-gray-300 cursor-not-allowed;
+    @apply opacity-30 cursor-not-allowed shadow-none;
   }
 
   .date-picker-week-cell {
-    @apply font-semibold;
+    @apply font-semibold text-gray-500 dark:text-gray-400;
   }
 
   .week-day-cell {
@@ -143,16 +143,16 @@
 
   .month-picker-cell,
   .year-picker-cell {
-    @apply text-center py-2 rounded-lg font-semibold text-gray-800;
+    @apply text-center py-2 px-3 rounded-xl font-semibold text-gray-700 dark:text-gray-300 transition-all cursor-pointer;
   }
 
   .month-picker-cell-active,
   .year-picker-cell-active {
-    @apply text-white;
+    @apply bg-base shadow-neo-inner text-primary font-bold;
   }
 
   .month-picker-cell-disabled,
   .year-picker-cell-disabled {
-    @apply opacity-30 bg-gray-300 cursor-not-allowed;
+    @apply opacity-30 cursor-not-allowed shadow-none;
   }
 }

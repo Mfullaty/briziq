@@ -29,6 +29,10 @@ import Steps from '@/components/ui/Steps'
 import Slider from '@/components/ui/Slider'
 import Menu from '@/components/ui/Menu'
 import Upload from '@/components/ui/Upload'
+import DatePicker from '@/components/ui/DatePicker'
+import Calendar from '@/components/ui/Calendar'
+import TimeInput from '@/components/ui/TimeInput'
+import InputGroup from '@/components/ui/InputGroup'
 import { HiUser } from 'react-icons/hi'
 
 export default function DesignSystemPage() {
@@ -374,6 +378,65 @@ export default function DesignSystemPage() {
                             </Table.Tr>
                         </Table.TBody>
                     </Table>
+                </div>
+            </section>
+
+            <section>
+                <h2 className="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-300">Date Picker & Calendar</h2>
+                <div className="flex flex-col gap-6 p-8 bg-base rounded-3xl shadow-neo">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl">
+                        <div>
+                            <span className="block text-sm font-semibold mb-2 text-gray-600 dark:text-gray-400">Single Date</span>
+                            <DatePicker placeholder="Select date" />
+                        </div>
+                        <div>
+                            <span className="block text-sm font-semibold mb-2 text-gray-600 dark:text-gray-400">Date Range</span>
+                            <DatePicker.DatePickerRange placeholder="Select date range" />
+                        </div>
+                        <div>
+                            <span className="block text-sm font-semibold mb-2 text-gray-600 dark:text-gray-400">Date Time</span>
+                            <DatePicker.DateTimepicker placeholder="Select date & time" />
+                        </div>
+                    </div>
+                    <div>
+                        <span className="block text-sm font-semibold mb-3 text-gray-600 dark:text-gray-400">Standalone Calendar</span>
+                        <div className="inline-block p-4 bg-base rounded-2xl shadow-neo">
+                            <Calendar />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 className="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-300">Time Input</h2>
+                <div className="flex flex-wrap gap-6 items-center p-8 bg-base rounded-3xl shadow-neo max-w-xl">
+                    <div className="w-48">
+                        <span className="block text-sm font-semibold mb-2 text-gray-600 dark:text-gray-400">Time</span>
+                        <TimeInput />
+                    </div>
+                    <div className="w-64">
+                        <span className="block text-sm font-semibold mb-2 text-gray-600 dark:text-gray-400">Time Range</span>
+                        <TimeInput.TimeInputRange />
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 className="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-300">Input Group</h2>
+                <div className="flex flex-col gap-6 p-8 bg-base rounded-3xl shadow-neo max-w-xl">
+                    <InputGroup>
+                        <InputGroup.Addon>@</InputGroup.Addon>
+                        <Input placeholder="Username" />
+                    </InputGroup>
+                    <InputGroup>
+                        <InputGroup.Addon>https://</InputGroup.Addon>
+                        <Input placeholder="mysite" />
+                        <InputGroup.Addon>.com</InputGroup.Addon>
+                    </InputGroup>
+                    <InputGroup>
+                        <Input placeholder="Search exporters..." />
+                        <Button variant="solid">Search</Button>
+                    </InputGroup>
                 </div>
             </section>
         </div>

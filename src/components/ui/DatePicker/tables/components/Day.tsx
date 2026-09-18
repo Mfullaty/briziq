@@ -99,7 +99,7 @@ const Day = (props: DayProps) => {
                     'date-picker-cell-hoverable',
                 selected &&
                     !disabled &&
-                    'date-picker-cell-selected bg-primary text-neutral',
+                    'date-picker-cell-selected bg-base shadow-neo-inner text-primary font-bold',
                 inRange &&
                     !disabled &&
                     !firstInRange &&

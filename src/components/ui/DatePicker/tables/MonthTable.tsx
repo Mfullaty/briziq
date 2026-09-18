@@ -53,9 +53,9 @@ const MonthTable = (props: MonthTableProps) => {
                 className={classNames(
                     'month-picker-cell',
                     active && !disabled
-                        ? 'month-picker-cell-active bg-primary'
+                        ? 'month-picker-cell-active bg-base shadow-neo-inner text-primary font-bold'
                         : 'text-gray-800 dark:text-gray-100',
-                    !active && !disabled && 'hover:bg-gray-100',
+                    !active && !disabled && 'hover:shadow-neo',
                     disabled && 'month-picker-cell-disabled',
                 )}
                 disabled={disabled}

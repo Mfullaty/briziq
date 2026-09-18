@@ -1,6 +1,5 @@
 import { createClient } from '@/utils/supabase/server'
 import { cookies } from 'next/headers'
-import DrawerTest from './DrawerTest'
 
 export default async function Page() {
     const cookieStore = await cookies()
@@ -14,8 +13,8 @@ export default async function Page() {
                 {todos?.map((todo) => (
                     <li key={todo.id}>{todo.name}</li>
                 ))}
+                Home Page
             </ul>
-            <DrawerTest />
         </div>
     )
 }

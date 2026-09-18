@@ -31,6 +31,14 @@
 - [x] Slider
 - [x] Menu
 - [x] Upload
+- [x] DatePicker
+- [x] Calendar
+- [x] RangeCalendar
+- [x] TimeInput
+- [x] InputGroup
+- [x] ScrollBar
+- [x] StatusIcon
+- [x] toast
 
 ## Pending Components
-- [ ] ...
+None (All UI components converted to Neumorphism)
