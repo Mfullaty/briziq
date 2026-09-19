@@ -6,6 +6,7 @@ import SignUp from '@/components/auth/SignUp'
 import { apiSignUp } from '@/services/AuthService'
 import { useRouter } from 'next/navigation'
 import type { OnSignUpPayload } from '@/components/auth/SignUp'
+import type { AxiosError } from 'axios'
 
 const SignUpClient = () => {
     const router = useRouter()
@@ -25,7 +26,11 @@ const SignUpClient = () => {
             )
             router.push('/sign-in')
         } catch (error) {
-            setMessage(error as string)
+            const response = (error as AxiosError<{ message?: string }>)
+                .response
+            setMessage(
+                response?.data?.message ?? 'Unable to create your account.',
+            )
         } finally {
             setSubmitting(false)
         }

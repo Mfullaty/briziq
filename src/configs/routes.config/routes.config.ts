@@ -1,14 +1,30 @@
 import authRoute from './authRoute'
 import type { Routes } from '@/@types/routes'
+import { ROLES } from '@/constants/roles.constant'
 
 export const protectedRoutes: Routes = {
     '/dashboard': {
         key: 'dashboard',
-        authority: ['admin'], //Only admin roles can access dashboard
+        authority: [
+            ROLES.BUYER,
+            ROLES.EXPORTER,
+            ROLES.ADMIN,
+            ROLES.VERIFICATION_OFFICER,
+        ],
         meta: {
             pageBackgroundType: 'plain',
             pageContainerType: 'contained',
         },
+    },
+    '/profile': {
+        key: 'profile',
+        authority: [
+            ROLES.BUYER,
+            ROLES.EXPORTER,
+            ROLES.ADMIN,
+            ROLES.VERIFICATION_OFFICER,
+        ],
+        meta: { pageBackgroundType: 'plain', pageContainerType: 'contained' },
     },
 }
 
