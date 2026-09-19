@@ -102,12 +102,12 @@
 - [x] AuthProvider + SessionContext wired into root layout
 - [x] Middleware for route protection and redirects
 - [x] Server actions for auth (handleSignIn, handleSignOut, handleSignUp, etc.)
-- [ ] Prisma User model with roles (`BUYER`, `EXPORTER`, `ADMIN`, `VERIFICATION_OFFICER`)
-- [ ] Sign-up flow assigns role (Buyer or Exporter selection)
-- [ ] Role-based session extension in next-auth callbacks
-- [ ] Role-based middleware enforcement (Buyer vs Exporter vs Admin routes)
-- [ ] User profile page (view/edit)
-- [ ] Neumorphic styling applied to all auth pages
+- [x] Prisma User model with roles (`BUYER`, `EXPORTER`, `ADMIN`, `VERIFICATION_OFFICER`) (2026-09-19)
+- [x] Sign-up flow assigns role (Buyer or Exporter selection) (2026-09-19)
+- [x] Role-based session extension in next-auth callbacks (2026-09-19)
+- [x] Role-based middleware enforcement (Buyer vs Exporter vs Admin routes) (2026-09-19)
+- [x] User profile page (view/edit) (2026-09-19)
+- [x] Neumorphic styling applied to all auth pages (2026-09-19)
 
 ---
 
@@ -302,7 +302,7 @@
 |------|------|--------|----------|
 | 0 | Project Foundation | ✅ Complete | 14/14 |
 | 1 | Neumorphic UI Component Library | ✅ Complete | 38/38 |
-| 2 | Authentication & User Management | 🔶 Partial | 5/11 |
+| 2 | Authentication & User Management | ✅ Complete | 11/11 |
 | 3 | Database Schema & Prisma Setup | 🔶 Started | 1/11 |
 | 4 | Landing Page & Global Search | ⬜ Not started | 0/12 |
 | 5 | AI Verification & Export Readiness | ⬜ Not started | 0/16 |
@@ -314,7 +314,7 @@
 | 11 | Admin Dashboard | ⬜ Not started | 0/6 |
 | 12 | Polish, Testing & Launch | ⬜ Not started | 0/9 |
 
-**Next action:** Complete Epic 2 (finish auth with roles) → Epic 3 (full Prisma schema) → Epic 4 (landing page).
+**Next action:** Epic 3 (full Prisma schema) → Epic 4 (landing page).
 
 ---
 
@@ -323,3 +323,4 @@
 | Date | Epic | Change | Agent/Author |
 |------|------|--------|--------------|
 | 2026-09-18 | 0, 1, 2, 3 | Initial tracker created. Marked completed items based on codebase audit. | Agent |
+| 2026-09-19 | 2 | Added role-aware credentials and OAuth sessions, secure sign-up and profile APIs/UI, role-gated middleware, and chart formatter type correction. | Agent |

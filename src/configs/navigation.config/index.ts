@@ -5,6 +5,7 @@ import {
 } from '@/constants/navigation.constant'
 
 import type { NavigationTree } from '@/@types/navigation'
+import { ROLES } from '@/constants/roles.constant'
 
 const navigationConfig: NavigationTree[] = [
     {
@@ -15,6 +16,21 @@ const navigationConfig: NavigationTree[] = [
         icon: 'home',
         type: NAV_ITEM_TYPE_ITEM,
         authority: [],
+        subMenu: [],
+    },
+    {
+        key: 'profile',
+        path: '/profile',
+        title: 'Profile',
+        translateKey: 'nav.profile',
+        icon: 'singleMenu',
+        type: NAV_ITEM_TYPE_ITEM,
+        authority: [
+            ROLES.BUYER,
+            ROLES.EXPORTER,
+            ROLES.ADMIN,
+            ROLES.VERIFICATION_OFFICER,
+        ],
         subMenu: [],
     },
     /** Example purpose only, please remove */

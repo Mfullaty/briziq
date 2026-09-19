@@ -1,17 +1,15 @@
-'use server'
 import type { SignInCredential } from '@/@types/auth'
-import { signInUserData } from '@/mock/data/authData'
-import sleep from '@/utils/sleep'
+import { findUserByEmail } from '@/server/auth/user-repository'
+import { verifyPassword } from '@/server/auth/password'
 
 const validateCredential = async (values: SignInCredential) => {
-    /** Implement your validation here, as this is just a mock */
-    const { email, password } = values
-
-    await sleep(80)
-
-    const user = signInUserData.find(
-        (user) => user.email === email && user.password === password,
-    )
+    const user = await findUserByEmail(values.email.trim().toLowerCase())
+    if (
+        !user?.passwordHash ||
+        !(await verifyPassword(values.password, user.passwordHash))
+    ) {
+        return null
+    }
 
     return user
 }

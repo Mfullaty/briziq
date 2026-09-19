@@ -24,12 +24,10 @@ export const apexLineChartDefaultOption: ApexOptions = {
             vertical: 10,
         },
         tooltipHoverFormatter: function (val, opts) {
-            return (
-                val +
-                ' - ' +
-                opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] +
-                ''
-            )
+            const series = opts?.w.globals.series?.[opts.seriesIndex]
+            const value = Array.isArray(series) ? series.at(-1) : series
+
+            return value === undefined ? val : `${val} - ${value}`
         },
     },
     xaxis: {
@@ -82,12 +80,10 @@ export const apexBarChartDefaultOption: ApexOptions = {
             vertical: 10,
         },
         tooltipHoverFormatter: function (val, opts) {
-            return (
-                val +
-                ' - ' +
-                opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] +
-                ''
-            )
+            const series = opts?.w.globals.series?.[opts.seriesIndex]
+            const value = Array.isArray(series) ? series.at(-1) : series
+
+            return value === undefined ? val : `${val} - ${value}`
         },
     },
     xaxis: {

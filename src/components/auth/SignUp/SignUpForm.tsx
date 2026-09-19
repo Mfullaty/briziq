@@ -8,12 +8,14 @@ import { useForm, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import type { CommonProps } from '@/@types/common'
+import { ROLES } from '@/constants/roles.constant'
 
 type SignUpFormSchema = {
     userName: string
     password: string
     email: string
     confirmPassword: string
+    role: 'BUYER' | 'EXPORTER'
 }
 
 export type OnSignUpPayload = {
@@ -34,7 +36,10 @@ const validationSchema = z
         email: z.email({ message: 'Please enter a valid email' }),
         userName: z.string().min(1, { message: 'Please enter your name' }),
         password: z.string().min(1, { message: 'Password required' }),
-        confirmPassword: z.string().min(1, { message: 'Confirm Password Required' }),
+        role: z.enum([ROLES.BUYER, ROLES.EXPORTER]),
+        confirmPassword: z
+            .string()
+            .min(1, { message: 'Confirm Password Required' }),
     })
     .refine((data) => data.password === data.confirmPassword, {
         message: 'Password not match',
@@ -52,6 +57,7 @@ const SignUpForm = (props: SignUpFormProps) => {
         control,
     } = useForm<SignUpFormSchema>({
         resolver: zodResolver(validationSchema),
+        defaultValues: { role: ROLES.BUYER },
     })
 
     const handleSignUp = async (values: SignUpFormSchema) => {
@@ -64,6 +70,42 @@ const SignUpForm = (props: SignUpFormProps) => {
         <div className={className}>
             <Form onSubmit={handleSubmit(handleSignUp)}>
                 <FormItem
+                    label="I am joining as"
+                    invalid={Boolean(errors.role)}
+                    errorMessage={errors.role?.message}
+                >
+                    <Controller
+                        name="role"
+                        control={control}
+                        render={({ field }) => (
+                            <div
+                                className="flex gap-5"
+                                role="radiogroup"
+                                aria-label="Account type"
+                            >
+                                <label className="flex items-center gap-2">
+                                    <input
+                                        type="radio"
+                                        value={ROLES.BUYER}
+                                        checked={field.value === ROLES.BUYER}
+                                        onChange={field.onChange}
+                                    />
+                                    Buyer
+                                </label>
+                                <label className="flex items-center gap-2">
+                                    <input
+                                        type="radio"
+                                        value={ROLES.EXPORTER}
+                                        checked={field.value === ROLES.EXPORTER}
+                                        onChange={field.onChange}
+                                    />
+                                    Exporter
+                                </label>
+                            </div>
+                        )}
+                    />
+                </FormItem>
+                <FormItem
                     label="User name"
                     invalid={Boolean(errors.userName)}
                     errorMessage={errors.userName?.message}
@@ -75,7 +117,7 @@ const SignUpForm = (props: SignUpFormProps) => {
                             <Input
                                 type="text"
                                 placeholder="User Name"
-                                autoComplete="off"
+                                autoComplete="name"
                                 {...field}
                             />
                         )}
@@ -93,7 +135,7 @@ const SignUpForm = (props: SignUpFormProps) => {
                             <Input
                                 type="email"
                                 placeholder="Email"
-                                autoComplete="off"
+                                autoComplete="email"
                                 {...field}
                             />
                         )}
@@ -110,7 +152,7 @@ const SignUpForm = (props: SignUpFormProps) => {
                         render={({ field }) => (
                             <Input
                                 type="password"
-                                autoComplete="off"
+                                autoComplete="new-password"
                                 placeholder="Password"
                                 {...field}
                             />
@@ -128,7 +170,7 @@ const SignUpForm = (props: SignUpFormProps) => {
                         render={({ field }) => (
                             <Input
                                 type="password"
-                                autoComplete="off"
+                                autoComplete="new-password"
                                 placeholder="Confirm Password"
                                 {...field}
                             />

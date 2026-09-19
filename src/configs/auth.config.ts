@@ -5,6 +5,7 @@ import Github from 'next-auth/providers/github'
 import Google from 'next-auth/providers/google'
 
 import type { SignInCredential } from '@/@types/auth'
+import { findOrCreateOAuthUser } from '@/server/auth/user-repository'
 
 export default {
     providers: [
@@ -28,22 +29,42 @@ export default {
 
                 return {
                     id: user.id,
-                    name: user.userName,
+                    name: user.name,
                     email: user.email,
-                    image: user.avatar,
+                    role: user.role,
                 }
             },
         }),
     ],
     callbacks: {
+        async jwt({ token, user, account }) {
+            if (user?.email) {
+                const persistedUser = await findOrCreateOAuthUser({
+                    email: user.email.trim().toLowerCase(),
+                    name: user.name?.trim() || user.email,
+                })
+                if (persistedUser) {
+                    token.id = persistedUser.id
+                    token.role = persistedUser.role
+                    token.sub = persistedUser.id
+                }
+            }
+
+            if (account?.provider === 'credentials' && user) {
+                token.id = user.id
+                token.role = user.role
+                token.sub = user.id
+            }
+            return token
+        },
         async session(payload) {
-            /** apply extra user attributes here, for example, we add 'authority' & 'id' in this section */
             return {
                 ...payload.session,
                 user: {
                     ...payload.session.user,
-                    id: payload.token.sub,
-                    authority: ['admin', 'user'],
+                    id: payload.token.id ?? payload.token.sub,
+                    role: payload.token.role,
+                    authority: payload.token.role ? [payload.token.role] : [],
                 },
             }
         },

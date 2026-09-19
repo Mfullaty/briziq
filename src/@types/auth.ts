@@ -23,6 +23,7 @@ export type SignUpCredential = {
     userName: string
     email: string
     password: string
+    role: 'BUYER' | 'EXPORTER'
 }
 
 export type ForgotPassword = {
@@ -43,11 +44,12 @@ export type AuthResult = Promise<{
 }>
 
 export type User = {
-    userId?: string | null
+    id?: string | null
     avatar?: string | null
     userName?: string | null
     email?: string | null
-    authority?: string[]
+    role?: import('@/constants/roles.constant').Role
+    authority?: import('@/constants/roles.constant').Role[]
 }
 
 export type Token = {
